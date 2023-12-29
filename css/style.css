@@ -1,0 +1,263 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Space Mono';
+}
+
+:root {
+	--main-color: rgb(49, 49, 49);
+	--main-text-color: white;
+	--secondary-text-color: rgb(141, 141, 141);
+	--background-menu-color: rgb(77, 77, 77);
+	--button-hover-color: rgb(133, 133, 133);
+	--theme-text-color: #8d5dff;
+	--incorrect-text-color: #ca4754;
+}
+
+body {
+	background-color: var(--main-color);
+}
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.navigation-container {
+	padding-block: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navigation-menu {
+	background-color: var(--background-menu-color);
+	border-radius: 0.5rem;
+	padding: 3px;
+}
+
+.navigation-list {
+	display: flex;
+	gap: 15px;
+}
+
+.navigation-list button {
+	border: none;
+	background: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.navigation-list button:hover {
+	background: var(--button-hover-color);
+	border-radius: 0.5rem;
+}
+
+.navigation-list img {
+	width: 27px;
+}
+
+h1 {
+	font-size: 36px;
+	color: var(--main-text-color);
+}
+
+.alpha-ver {
+	color: gray;
+	padding: 5px;
+	font-size: 13px;
+}
+
+.line-printing-type {
+	height: 40px;
+	align-items: center;
+	width: 25%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin: 0 auto;
+	justify-content: space-around;
+	background-color: var(--background-menu-color);
+	border-radius: 0.5rem;
+	color: var(--secondary-text-color);
+	margin-bottom: 70px;
+}
+.time-type {
+	transition: all 0.2s ease-in;
+	cursor: pointer;
+}
+
+.word-type {
+	transition: all 0.2s ease-in;
+	cursor: pointer;
+}
+
+.time-type:hover {
+	color: var(--main-text-color);
+}
+
+.word-type:hover {
+	color: var(--main-text-color);
+}
+
+.challenge {
+	display: flex;
+	justify-content: center;
+	font-size: 45px;
+	margin-bottom: 25px;
+	color: var(--main-text-color);
+}
+
+.timer {
+	display: none;
+}
+
+.word-count {
+	display: none;
+}
+
+.text-container {
+	display: flex;
+	justify-content: center;
+	max-height: 8rem;
+	overflow-y: auto;
+}
+
+.text-container::-webkit-scrollbar {
+	width: 0;
+}
+
+.text-for-writing {
+	width: 85%;
+	color: var(--secondary-text-color);
+	text-wrap: wrap;
+	/* white-space: nowrap; */
+	/* word-break:normal; */
+	font-size: 26px;
+	line-height: 1.9;
+}
+
+.text-for-writing span.correct {
+	color: var(--main-text-color);
+}
+
+.text-for-writing span.incorrect {
+	color: var(--incorrect-text-color);
+	border-bottom: 2px solid;
+	transition: none;
+}
+
+.input-field {
+	opacity: 0;
+	z-index: -999;
+	/* position: absolute; */
+}
+
+.text-for-writing::-webkit-scrollbar {
+	width: 0;
+}
+.text-for-writing {
+	font-size: 23px;
+	text-align: justify;
+	letter-spacing: 1px;
+}
+.text-for-writing span {
+	text-align: center;
+	position: relative;
+	display: inline;
+	transition: 0.3s all ease;
+}
+
+.active {
+	display: inline;
+	color: var(--theme-text-color);
+}
+
+.tools {
+	display: flex;
+	justify-content: center;
+}
+.resetGame {
+	font-size: 16px;
+	height: 40px;
+	align-items: center;
+	width: 20%;
+	/* margin: 0 auto; */
+	justify-content: space-around;
+	background-color: var(--background-menu-color);
+	border-radius: 0.5rem;
+	color: var(--secondary-text-color);
+	margin-top: 70px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.resetGame:hover {
+	color: var(--main-text-color);
+}
+
+.resetGame:focus {
+	color: var(--main-text-color);
+}
+
+.text-for-writing span.active {
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 0 0 #8d5dff;
+	color: var(--theme-text-color);
+}
+
+.blur {
+	filter: blur(5px);
+	z-index: -1;
+	pointer-events: none;
+}
+
+.popup-result_container {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.popup-result {
+	position: fixed;
+	background-color: rgb(102, 102, 102);
+	padding: 30px;
+	border-radius: 22px;
+}
+
+.popup-result p {
+	font-size: 25px;
+	line-height: 1.5;
+}
+
+.resetGameRes {
+	font-size: 16px;
+	height: 40px;
+	width: 100%;
+	background-color: var(--background-menu-color);
+	border-radius: 0.5rem;
+	color: var(--secondary-text-color);
+	margin-top: 15px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.popup-result_container.visible {
+	display: flex;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Swiftkey</title>
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="navigation-container">
+				<a href="index.html">
+					<h1><span>swiftkey<span><span class='alpha-ver'>alpha version</span></h1>
+				</a>
+				<nav class='navigation-menu'>
+					<ul class='navigation-list'>
+						<button id='nav-settings'>
+							<li id='navigation-settings' class='navigation-list-item'><img src="/images/settings.png"
+									alt="navigation-settings"></li>
+						</button>
+						<button id='nav-themes'>
+							<li id='navigation-themes' class='navigation-list-item'><img src="/images/theme.png"
+									alt="navigation-themes"></li>
+						</button>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<input type="text" class="input-field" id='input-area'>
+			<div class="content-box" id='main-content-box'>
+				<div class="line-printing-type" id='printing-line'>
+					<p class='time-type' id='type-time'>time</p>
+					<p class='divider'>||</p>
+					<p class='word-type' id='type-word'>words</p>
+				</div>
+				<div class="challenge time">
+					<p class='timer active' id='timer'><span class='timer-change-count' id='time-left'>60</span>s</p>
+					<p class='word-count' id='word-count'><span class='word-change-count' id='word-counter'>0</span>/50</p>
+				</div>
+				<div class="text-container" id='text-container'>
+					<p class='text-for-writing' id='text-area'></p>
+				</div>
+				<div class="tools">
+					<button class='resetGame' id='reset'>Reset</button>
+				</div>
+			</div>
+			<div class="popup-result_container" id='results'>
+				<div class="popup-result">
+					<p class='wpm'>WPM: <span id='wpm-span'></span></p>
+					<p class='epm'>EPM: <span id='emp-span'></span></p>
+					<p class='mistakes'>Mistakes: <span id='mistakes-span'></span></p>
+					<button class='resetGameRes' id='reset-result'>Restart test</button>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+
+		</div>
+	</footer>
+
+	<script src='script.js'></script>
+</body>
+
+</html>
