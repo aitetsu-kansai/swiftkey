@@ -40,6 +40,11 @@ function addRandomWords() {
 				document.addEventListener('keydown', () => inputField.focus())
 			})
 		})
+		.catch(err => {
+			let span = `<span>${err.message} data from API, please try later</span>`
+			return (textArea.innerHTML += span)
+			console.log()
+		})
 }
 
 document.addEventListener('DOMContentLoaded', addRandomWords)
